@@ -18,8 +18,6 @@ $bg-default: $white;
 
 html,
 body {
-  width: 100%;
-  height: 100%;
   font-size: 15px;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
@@ -42,6 +40,8 @@ a {
 
 button {
   cursor: pointer;
+  border: none;
+  background-color: transparent;
 }
 
 img {
@@ -52,3 +52,28 @@ img {
 
 //
 $gradient-main: linear-gradient(to bottom, #f48b82, #fce28a);
+
+@mixin mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.container {
+  max-width: 1240px;
+  width: 100%;
+  @include mx-auto();
+}
+
+.img-icon {
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+  object-fit: contain;
+}
+
+.icon {
+  font-size: 1.5rem;
+  color: currentColor;
+  display: inline-block;
+  line-height: 1;
+}

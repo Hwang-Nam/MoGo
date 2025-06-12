@@ -1,1 +1,8 @@
 @import "base";
+@import "header";
+
+//
+main {
+  background-image: url(/theme/frontend/images/img_bg01.png);
+  height: 200vh;
+}

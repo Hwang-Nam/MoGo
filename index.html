@@ -3,8 +3,87 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>MoGo</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <link rel="stylesheet" href="/theme/frontend/css/style.css" />
   </head>
-  <body></body>
+  <body>
+    <header class="header js-header">
+      <div class="header__inner container">
+        <a href="/" class="header__logo">MoGo</a>
+
+        <nav class="header-nav">
+          <ul class="header-nav-list">
+            <li class="header-nav-item">
+              <a
+                href="#"
+                class="header-nav-item__link header-nav-item__link--is-active"
+                >About</a
+              >
+            </li>
+            <li class="header-nav-item">
+              <a href="#" class="header-nav-item__link">Service</a>
+            </li>
+            <li class="header-nav-item">
+              <a href="#" class="header-nav-item__link">Work</a>
+            </li>
+            <li class="header-nav-item">
+              <a href="#" class="header-nav-item__link">Blog</a>
+            </li>
+            <li class="header-nav-item">
+              <a href="#" class="header-nav-item__link">Contact</a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="header-actions">
+          <button class="header-actions__btn" title="Cart">
+            <img
+              src="/theme/frontend/images/ico_shoppingcart.svg"
+              alt="Cart icon"
+              class="img-icon"
+            />
+          </button>
+
+          <button class="header-actions__btn" title="Search">
+            <img
+              src="/theme/frontend/images/ico_magnifyingglass.svg"
+              alt="Search icon"
+              class="img-icon"
+            />
+          </button>
+
+          <button
+            class="header-actions__btn header-actions__btn--menu js-nav-toggle"
+            aria-label="Toggle menu"
+          >
+            <i class="icon fa fa-bars"></i>
+          </button>
+        </div>
+      </div>
+    </header>
+    <!-- /header -->
+
+    <nav class="nav-mobile js-nav-mobile">
+      <button class="nav-mobile__close js-nav-close" title="Close">
+        <i class="fa fa-close icon"></i>
+      </button>
+
+      <ul class="nav-mobile__list">
+        <li class="nav-mobile__item"><a href="#">About</a></li>
+        <li class="nav-mobile__item"><a href="#">Service</a></li>
+        <li class="nav-mobile__item"><a href="#">Work</a></li>
+        <li class="nav-mobile__item"><a href="#">Blog</a></li>
+        <li class="nav-mobile__item"><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+    <!-- /nav-mobile -->
+
+    <main></main>
+
+    <script src="/theme/frontend/js/main.js"></script>
+  </body>
 </html>
