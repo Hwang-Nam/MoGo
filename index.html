@@ -12,56 +12,58 @@
   </head>
   <body>
     <header class="header js-header">
-      <div class="header__inner container">
-        <a href="/" class="header__logo">MoGo</a>
+      <div class="container">
+        <div class="header__inner">
+          <a href="/" class="header__logo">MoGo</a>
 
-        <nav class="header-nav">
-          <ul class="header-nav-list">
-            <li class="header-nav-item">
-              <a
-                href="#"
-                class="header-nav-item__link header-nav-item__link--is-active"
-                >About</a
-              >
-            </li>
-            <li class="header-nav-item">
-              <a href="#" class="header-nav-item__link">Service</a>
-            </li>
-            <li class="header-nav-item">
-              <a href="#" class="header-nav-item__link">Work</a>
-            </li>
-            <li class="header-nav-item">
-              <a href="#" class="header-nav-item__link">Blog</a>
-            </li>
-            <li class="header-nav-item">
-              <a href="#" class="header-nav-item__link">Contact</a>
-            </li>
-          </ul>
-        </nav>
+          <nav class="header-nav">
+            <ul class="header-nav-list">
+              <li class="header-nav-item">
+                <a
+                  href="#"
+                  class="header-nav-item__link header-nav-item__link--is-active"
+                  >About</a
+                >
+              </li>
+              <li class="header-nav-item">
+                <a href="#" class="header-nav-item__link">Service</a>
+              </li>
+              <li class="header-nav-item">
+                <a href="#" class="header-nav-item__link">Work</a>
+              </li>
+              <li class="header-nav-item">
+                <a href="#" class="header-nav-item__link">Blog</a>
+              </li>
+              <li class="header-nav-item">
+                <a href="#" class="header-nav-item__link">Contact</a>
+              </li>
+            </ul>
+          </nav>
 
-        <div class="header-actions">
-          <button class="header-actions__btn" title="Cart">
-            <img
-              src="/theme/frontend/images/ico_shoppingcart.svg"
-              alt="Cart icon"
-              class="img-icon"
-            />
-          </button>
+          <div class="header-actions">
+            <button class="header-actions__btn" title="Cart">
+              <img
+                src="/theme/frontend/images/ico_shoppingcart.svg"
+                alt="Cart icon"
+                class="img-icon"
+              />
+            </button>
 
-          <button class="header-actions__btn" title="Search">
-            <img
-              src="/theme/frontend/images/ico_magnifyingglass.svg"
-              alt="Search icon"
-              class="img-icon"
-            />
-          </button>
+            <button class="header-actions__btn" title="Search">
+              <img
+                src="/theme/frontend/images/ico_magnifyingglass.svg"
+                alt="Search icon"
+                class="img-icon"
+              />
+            </button>
 
-          <button
-            class="header-actions__btn header-actions__btn--menu js-nav-toggle"
-            aria-label="Toggle menu"
-          >
-            <i class="icon fa fa-bars"></i>
-          </button>
+            <button
+              class="header-actions__btn header-actions__btn--menu js-nav-toggle"
+              aria-label="Toggle menu"
+            >
+              <i class="icon fa fa-bars"></i>
+            </button>
+          </div>
         </div>
       </div>
     </header>
@@ -82,7 +84,359 @@
     </nav>
     <!-- /nav-mobile -->
 
-    <main></main>
+    <main>
+      <section class="banner">
+        <div class="container">
+          <div class="banner__content">
+            <div class="banner-slides">
+              <div class="banner-slides-item">
+                <p class="banner-slides-item__subtitle">Create Template</p>
+                <h5>Jon Doe</h5>
+
+                <h2 class="banner-slides-item__title">Welcome to MoGo</h2>
+                <button class="banner-slides-item__btn">Learn more</button>
+              </div>
+            </div>
+            <div class="banner-nav">
+              <ul class="banner-nav-list">
+                <li class="banner-nav-item banner-nav-item--is-active">
+                  <span class="banner-nav-item__num">01</span>
+                  <span class="banner-nav-item__label">Intro</span>
+                </li>
+                <li class="banner-nav-item is-active">
+                  <span class="banner-nav-item__num">02</span>
+                  <span class="banner-nav-item__label">Work</span>
+                </li>
+                <li class="banner-nav-item">
+                  <span class="banner-nav-item__num">03</span>
+                  <span class="banner-nav-item__label">About</span>
+                </li>
+                <li class="banner-nav-item">
+                  <span class="banner-nav-item__num">04</span>
+                  <span class="banner-nav-item__label">Contact</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- /banner -->
+
+      <section class="section section--about">
+        <div class="container">
+          <div class="about">
+            <div class="section-header about-header">
+              <p class="section-header__eyebrow">What we do</p>
+              <h2 class="section-header__ttl">Story about us</h2>
+              <p class="section-header__desc">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat.
+              </p>
+            </div>
+            <div class="about-body">
+              <div class="about-body-list">
+                <div class="about-body-item">
+                  <img
+                    src="theme/frontend/images/img_item01.png"
+                    alt="Service Image"
+                    class="about-body-item__img"
+                  />
+                  <div class="about-body-item__overlay">
+                    <img
+                      src="/theme/frontend/images/ico_users.svg"
+                      alt=""
+                      class="img-icon about-body-item__icon"
+                    />
+                    <span class="about-body-item__label">Super team</span>
+                  </div>
+                  <div class="about-body-item__card-bottom"></div>
+                </div>
+
+                <div class="about-body-item">
+                  <img
+                    src="theme/frontend/images/img_item03.png"
+                    alt="Service Image"
+                    class="about-body-item__img"
+                  />
+                  <div class="about-body-item__overlay">
+                    <img
+                      src="/theme/frontend/images/ico_users.svg"
+                      alt=""
+                      class="img-icon about-body-item__icon"
+                    />
+                    <span class="about-body-item__label">Super team</span>
+                  </div>
+                  <div class="about-body-item__card-bottom"></div>
+                </div>
+                <div class="about-body-item">
+                  <img
+                    src="theme/frontend/images/img_item02.png"
+                    alt="Service Image"
+                    class="about-body-item__img"
+                  />
+                  <div class="about-body-item__overlay">
+                    <img
+                      src="/theme/frontend/images/ico_users.svg"
+                      alt=""
+                      class="img-icon about-body-item__icon"
+                    />
+                    <span class="about-body-item__label">Super team</span>
+                  </div>
+                  <div class="about-body-item__card-bottom"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- /about -->
+
+      <section class="facts">
+        <div class="container">
+          <div class="facts-list">
+            <div class="facts-item">
+              <span class="facts-item__num">42</span>
+              <span class="facts-item__label">Web design projects</span>
+            </div>
+
+            <div class="facts-item">
+              <span class="facts-item__num">123</span>
+              <span class="facts-item__label">Happy client</span>
+            </div>
+            <div class="facts-item">
+              <span class="facts-item__num">15</span>
+              <span class="facts-item__label">Award winner</span>
+            </div>
+
+            <div class="facts-item">
+              <span class="facts-item__num">99</span>
+              <span class="facts-item__label">Cup of coffee</span>
+            </div>
+
+            <div class="facts-item">
+              <span class="facts-item__num">24</span>
+              <span class="facts-item__label">Members</span>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- /facts -->
+
+      <section class="section section--service">
+        <div class="container">
+          <div class="service">
+            <div class="section-header service-header">
+              <p class="section-header__eyebrow">We work with</p>
+              <h2 class="section-header__ttl">Amazing service</h2>
+            </div>
+            <div class="service-list">
+              <div class="service-item">
+                <img
+                  src="/theme/frontend/images/ico_alarm.svg"
+                  alt=""
+                  class="img-icon service-item__icon"
+                />
+                <div class="service-item-content">
+                  <h3 class="service-item-content__title">Photography</h3>
+                  <p class="service-item-content__description">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor.
+                  </p>
+                </div>
+              </div>
+              <div class="service-item">
+                <img
+                  src="/theme/frontend/images/ico_linegraph.svg"
+                  alt=""
+                  class="img-icon service-item__icon"
+                />
+                <div class="service-item-content">
+                  <h3 class="service-item-content__title">Photography</h3>
+                  <p class="service-item-content__description">
+                    Ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                    eiusmod tempor.
+                  </p>
+                </div>
+              </div>
+              <div class="service-item">
+                <img
+                  src="/theme/frontend/images/ico_computercheck.svg"
+                  alt=""
+                  class="img-icon service-item__icon"
+                />
+                <div class="service-item-content">
+                  <h3 class="service-item-content__title">Photography</h3>
+                  <p class="service-item-content__description">
+                    Dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                    tempor.
+                  </p>
+                </div>
+              </div>
+              <div class="service-item">
+                <img
+                  src="/theme/frontend/images/ico_book.svg"
+                  alt=""
+                  class="img-icon service-item__icon"
+                />
+                <div class="service-item-content">
+                  <h3 class="service-item-content__title">Photography</h3>
+                  <p class="service-item-content__description">
+                    Ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                    eiusmod.
+                  </p>
+                </div>
+              </div>
+              <div class="service-item">
+                <img
+                  src="/theme/frontend/images/ico_home.svg"
+                  alt=""
+                  class="img-icon service-item__icon"
+                />
+                <div class="service-item-content">
+                  <h3 class="service-item-content__title">Photography</h3>
+                  <p class="service-item-content__description">
+                    Ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                    eiusmod.
+                  </p>
+                </div>
+              </div>
+              <div class="service-item">
+                <img
+                  src="/theme/frontend/images/ico_img.svg"
+                  alt=""
+                  class="img-icon service-item__icon"
+                />
+                <div class="service-item-content">
+                  <h3 class="service-item-content__title">Photography</h3>
+                  <p class="service-item-content__description">
+                    Ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                    eiusmod.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- /service -->
+
+      <section class="section section--feature">
+        <div class="container">
+          <div class="feature">
+            <div class="section-header feature-header">
+              <p class="section-header__eyebrow">For all services</p>
+              <h2 class="section-header__ttl">Unique design</h2>
+            </div>
+            <div class="feature-body">
+              <div class="feature-body-wrapper">
+                <img
+                  class="feature-body-wrapper__main"
+                  src="/theme/frontend/images/img_device01.png"
+                  alt=""
+                />
+                <img
+                  class="feature-body-wrapper__small"
+                  src="/theme/frontend/images/img_device02.png"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- /feature -->
+
+      <!-- ============== NOT DONE =================-->
+      <section class="section section--service2">
+        <div class="container">
+          <div class="service2">
+            <div class="section-header service2-header">
+              <p class="section-header__eyebrow">Services</p>
+              <h2 class="section-header__ttl">What we do</h2>
+              <p class="section-header__desc">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- /service2 -->
+
+      <section class="quotes">
+        <div class="container">
+          <div class="quotes-slider js-quotes-slider">
+            <div class="quotes-item js-quotes-item quotes-item--is-active">
+              <img
+                src="/theme/frontend/images/ico_chat.svg"
+                alt=""
+                class="img-icon quotes-item__icon"
+              />
+              <div class="quotes-item__content">
+                <p>
+                  “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam, quis nostrud exercitation.”
+                </p>
+                <h5>Jon Doe</h5>
+              </div>
+            </div>
+            <div class="quotes-item js-quotes-item">
+              <img
+                src="/theme/frontend/images/ico_chat.svg"
+                alt=""
+                class="img-icon quotes-item__icon"
+              />
+              <div class="quotes-item__content">
+                <p>
+                  “Incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                  veniam, quis nostrud exercitation.”
+                </p>
+                <h5>Jon Doe</h5>
+              </div>
+            </div>
+            <div class="quotes-item js-quotes-item">
+              <img
+                src="/theme/frontend/images/ico_chat.svg"
+                alt=""
+                class="img-icon quotes-item__icon"
+              />
+              <div class="quotes-item__content">
+                <p>
+                  “Tempor incididunt ut labore et dolore magna aliqua. Ut enim
+                  ad minim veniam, quis nostrud exercitation.”
+                </p>
+                <h5>Jon Doe</h5>
+              </div>
+            </div>
+
+            <button
+              class="quotes-slider__btn js-quotes-prev quotes-slider__btn--prev"
+            >
+              <img
+                src="/theme/frontend/images/ico_arrowright.svg"
+                alt=""
+                class="img-icon"
+              />
+            </button>
+            <button
+              class="quotes-slider__btn js-quotes-next quotes-slider__btn--next"
+            >
+              <img
+                src="/theme/frontend/images/ico_arrowright.svg"
+                alt=""
+                class="img-icon"
+              />
+            </button>
+          </div>
+        </div>
+      </section>
+      <!-- /quotes -->
+    </main>
 
     <script src="/theme/frontend/js/main.js"></script>
   </body>
