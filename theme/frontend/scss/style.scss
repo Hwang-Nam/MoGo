@@ -5,7 +5,7 @@
   padding-block: 4rem;
 
   &--feature {
-    background-image: url("/theme/frontend/images/img_bg02.png");
+    background-image: url("../images/img_bg02.png");
     background-position: center;
     background-size: cover;
     padding-bottom: 0 !important;
@@ -76,7 +76,7 @@ main {
 // banner
 .banner {
   color: $text-inverse;
-  background-image: url(/theme/frontend/images/img_bg01.png);
+  background-image: url(../images/img_bg01.png);
   background-size: cover;
   background-position: center center;
   position: relative;
