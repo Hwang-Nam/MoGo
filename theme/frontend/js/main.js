@@ -22,25 +22,39 @@ mobileNav.addEventListener("click", (e) => {
   }
 });
 
-document.addEventListener("DOMContentLoaded", function () {
-  const items = document.querySelectorAll(".js-quotes-item");
-  const nextBtn = document.querySelector(".js-quotes-next");
-  const prevBtn = document.querySelector(".js-quotes-prev");
+document.querySelectorAll(".js-quotes-slider").forEach((slider) => {
+  const items = slider.querySelectorAll(".js-quotes-item");
+  const btnNext = slider.querySelector(".js-quotes-next");
+  const btnPrev = slider.querySelector(".js-quotes-prev");
   let current = 0;
 
-  function show(index) {
+  const showItem = (index) => {
     items.forEach((item, i) => {
       item.classList.toggle("quotes-item--is-active", i === index);
     });
-  }
+  };
 
-  nextBtn.addEventListener("click", () => {
+  btnNext.addEventListener("click", () => {
     current = (current + 1) % items.length;
-    show(current);
+    showItem(current);
   });
 
-  prevBtn.addEventListener("click", () => {
+  btnPrev.addEventListener("click", () => {
     current = (current - 1 + items.length) % items.length;
-    show(current);
+    showItem(current);
+  });
+});
+
+document.querySelectorAll(".js-service2-item").forEach((item) => {
+  const trigger = item.querySelector(".js-service2-trigger");
+
+  trigger.addEventListener("click", () => {
+    document.querySelectorAll(".js-service2-item").forEach((el) => {
+      if (el !== item) {
+        el.classList.remove("service2-item--is-open");
+      }
+    });
+
+    item.classList.toggle("service2-item--is-open");
   });
 });

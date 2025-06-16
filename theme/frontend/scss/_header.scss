@@ -6,7 +6,7 @@
   color: $text-inverse;
   background-color: transparent;
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
-  z-index: 90; // Header base level
+  z-index: 5; // Header base level
 
   &--is-scrolled {
     background-color: rgba(0, 0, 0, 0.7);
@@ -89,7 +89,7 @@
   position: fixed;
   inset: 0;
   background-color: rgba(0, 0, 0, 0.5);
-  z-index: 99; // Mobile menu overlay
+  z-index: 9; // Mobile menu overlay
   display: flex;
   justify-content: flex-end;
   visibility: hidden;
@@ -126,7 +126,7 @@
     position: absolute;
     top: 1rem;
     right: 1rem;
-    z-index: 100; // Close button highest to stay clickable above everything
+    z-index: 10; // Close button highest to stay clickable above everything
     background: none;
     border: none;
     font-size: 1.75rem;
