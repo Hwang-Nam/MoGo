@@ -8,309 +8,371 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <link rel="stylesheet" href="./theme/frontend/css/style.css" />
   </head>
   <body>
-    <header class="header js-header">
-      <div class="container">
-        <div class="header__inner">
-          <div class="header__logo">
-            <a href="/" class="header__logo">MoGo</a>
+    <header class="Header js-header">
+      <div class="Container">
+        <div class="Header-inner">
+          <div class="Header-inner-logo">
+            <a href="/" class="Header-inner-logo__lnk">MoGo</a>
           </div>
 
-          <nav class="header-nav">
-            <ul class="header-nav-list">
-              <li class="header-nav-item">
-                <a
-                  href="#"
-                  class="header-nav-item__link header-nav-item__link--is-active"
+          <nav class="Header-inner-nav js-header-nav">
+            <ul class="Header-inner-nav-list">
+              <li class="Header-inner-nav-item">
+                <a href="#about" class="Header-inner-nav-item__lnk js-nav-lnk"
                   >About</a
                 >
               </li>
-              <li class="header-nav-item">
-                <a href="#" class="header-nav-item__link">Service</a>
+              <li class="Header-inner-nav-item">
+                <a href="#service" class="Header-inner-nav-item__lnk js-nav-lnk"
+                  >Service</a
+                >
               </li>
-              <li class="header-nav-item">
-                <a href="#" class="header-nav-item__link">Work</a>
+              <li class="Header-inner-nav-item">
+                <a href="#work" class="Header-inner-nav-item__lnk js-nav-lnk"
+                  >Work</a
+                >
               </li>
-              <li class="header-nav-item">
-                <a href="#" class="header-nav-item__link">Blog</a>
+              <li class="Header-inner-nav-item">
+                <a href="#blog" class="Header-inner-nav-item__lnk js-nav-lnk"
+                  >Blog</a
+                >
               </li>
-              <li class="header-nav-item">
-                <a href="#" class="header-nav-item__link">Contact</a>
+              <li class="Header-inner-nav-item">
+                <a href="#footer" class="Header-inner-nav-item__lnk js-nav-lnk"
+                  >Contact</a
+                >
               </li>
             </ul>
           </nav>
 
-          <div class="header-actions">
-            <button class="header-actions__btn" title="Cart">
+          <div class="Header-inner-actions">
+            <button
+              class="Header-inner-actions__btn js-cart-toggle"
+              title="Cart"
+            >
               <img
                 src="./theme/frontend/images/ico_shoppingcart.svg"
                 alt="Cart icon"
-                class="img-icon"
-              />
-            </button>
-
-            <button class="header-actions__btn" title="Search">
-              <img
-                src="./theme/frontend/images/ico_magnifyingglass.svg"
-                alt="Search icon"
-                class="img-icon"
+                class="img-ico"
               />
             </button>
 
             <button
-              class="header-actions__btn header-actions__btn--menu js-nav-toggle"
+              class="Header-inner-actions__btn js-search-toggle"
+              title="Search"
+            >
+              <img
+                src="./theme/frontend/images/ico_magnifyingglass.svg"
+                alt="Search icon"
+                class="img-ico"
+              />
+            </button>
+
+            <button
+              class="Header-inner-actions__btn Header-inner-actions__btn--menu js-nav-toggle"
               aria-label="Toggle menu"
             >
-              <i class="icon fa fa-bars"></i>
+              <i class="icon fa fa-bars js-menu-icon"></i>
             </button>
+
+            <div class="Header-inner-actions-search js-header-search-popup">
+              <form
+                class="Header-inner-actions-search-form"
+                role="search"
+                aria-label="Site search"
+              >
+                <input
+                  type="text"
+                  class="Header-inner-actions-search-form__input"
+                  placeholder="Search..."
+                  aria-label="Search input"
+                />
+                <button
+                  type="submit"
+                  class="Header-inner-actions-search-form__btn"
+                  aria-label="Submit search"
+                >
+                  <img
+                    src="./theme/frontend/images/ico_magnifyingglass.svg"
+                    alt="Search icon"
+                    class="img-ico"
+                  />
+                </button>
+              </form>
+            </div>
+
+            <div class="Header-inner-actions-cart js-header-cart-popup">
+              <p class="Header-inner-actions-cart__message">
+                Your cart is currently empty.
+              </p>
+            </div>
           </div>
         </div>
       </div>
     </header>
     <!-- /header -->
 
-    <nav class="nav-mobile js-nav-mobile">
-      <button class="nav-mobile__close js-nav-close" title="Close">
-        <i class="fa fa-close icon"></i>
-      </button>
-
-      <ul class="nav-mobile__list">
-        <li class="nav-mobile__item"><a href="#">About</a></li>
-        <li class="nav-mobile__item"><a href="#">Service</a></li>
-        <li class="nav-mobile__item"><a href="#">Work</a></li>
-        <li class="nav-mobile__item"><a href="#">Blog</a></li>
-        <li class="nav-mobile__item"><a href="#">Contact</a></li>
-      </ul>
-    </nav>
-    <!-- /nav-mobile -->
-
+    <div class="Overlay js-overlay"></div>
+    <!-- /Overlay -->
     <main>
-      <section class="banner">
-        <div class="container">
-          <div class="banner__content">
-            <div class="banner-slides">
-              <div class="banner-slides-item">
-                <p class="banner-slides-item__subtitle">Create Template</p>
-                <h2 class="banner-slides-item__title">Welcome to MoGo</h2>
-                <button class="banner-slides-item__btn">Learn more</button>
+      <section id="banner" class="Banner js-section">
+        <div class="Container">
+          <div class="Banner-content">
+            <div class="swiper js-banner-swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide Banner-content-slide">
+                  <p class="Banner-content-slide__subtitle">Create Template</p>
+                  <h2 class="Banner-content-slide__ttl">Welcome to MoGo</h2>
+                  <button class="Banner-content-slide__btn">Learn more</button>
+                </div>
+                <div class="swiper-slide Banner-content-slide">
+                  <p class="Banner-content-slide__subtitle">What we do</p>
+                  <h2 class="Banner-content-slide__ttl">Our Work</h2>
+                  <button class="Banner-content-slide__btn">See Test</button>
+                </div>
+                <div class="swiper-slide Banner-content-slide">
+                  <p class="Banner-content-slide__subtitle">Who we are</p>
+                  <h2 class="Banner-content-slide__ttl">About Us</h2>
+                  <button class="Banner-content-slide__btn">Read more</button>
+                </div>
+                <div class="swiper-slide Banner-content-slide">
+                  <p class="Banner-content-slide__subtitle">Get in touch</p>
+                  <h2 class="Banner-content-slide__ttl">Contact</h2>
+                  <button class="Banner-content-slide__btn">Contact Us</button>
+                </div>
               </div>
             </div>
-            <div class="banner-nav">
-              <ul class="banner-nav-list">
-                <li class="banner-nav-item banner-nav-item--is-active">
-                  <span class="banner-nav-item__num">01</span>
-                  <span class="banner-nav-item__label">Intro</span>
+
+            <div class="Banner-content-nav js-Banner-nav">
+              <ul class="Banner-content-nav-list">
+                <li
+                  class="Banner-content-nav-item js-banner-nav-item Banner-content-nav-item--active"
+                >
+                  <span class="Banner-content-nav-item__num">01</span>
+                  <span class="Banner-content-nav-item__label">Intro</span>
                 </li>
-                <li class="banner-nav-item is-active">
-                  <span class="banner-nav-item__num">02</span>
-                  <span class="banner-nav-item__label">Work</span>
+                <li class="Banner-content-nav-item js-banner-nav-item">
+                  <span class="Banner-content-nav-item__num">02</span>
+                  <span class="Banner-content-nav-item__label">Work</span>
                 </li>
-                <li class="banner-nav-item">
-                  <span class="banner-nav-item__num">03</span>
-                  <span class="banner-nav-item__label">About</span>
+                <li class="Banner-content-nav-item js-banner-nav-item">
+                  <span class="Banner-content-nav-item__num">03</span>
+                  <span class="Banner-content-nav-item__label">About</span>
                 </li>
-                <li class="banner-nav-item">
-                  <span class="banner-nav-item__num">04</span>
-                  <span class="banner-nav-item__label">Contact</span>
+                <li class="Banner-content-nav-item js-banner-nav-item">
+                  <span class="Banner-content-nav-item__num">04</span>
+                  <span class="Banner-content-nav-item__label">Contact</span>
                 </li>
               </ul>
             </div>
           </div>
         </div>
       </section>
-      <!-- /banner -->
+      <!-- /Banner -->
 
-      <section class="section section--about">
-        <div class="container">
-          <div class="about">
-            <div class="section-header about-header">
-              <p class="section-header__eyebrow">What we do</p>
-              <h2 class="section-header__ttl">Story about us</h2>
-              <p class="section-header__desc">
+      <section id="about" class="Section Section--about js-section">
+        <div class="Container">
+          <div class="About">
+            <div class="Section-header About-header">
+              <p class="Section-header__eyebrow">What we do</p>
+              <h2 class="Section-header__ttl">Story about us</h2>
+              <p class="Section-header__desc">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
                 enim ad minim veniam, quis nostrud exercitation ullamco laboris
                 nisi ut aliquip ex ea commodo consequat.
               </p>
             </div>
-            <div class="about-body">
-              <div class="about-body-list">
-                <div class="about-body-item">
+            <div class="About-body">
+              <div class="About-body-list">
+                <div class="About-body-item">
                   <img
                     src="./theme/frontend/images/img_item01.png"
                     alt="Service Image"
-                    class="about-body-item__img"
+                    class="About-body-item__img"
                   />
-                  <div class="about-body-item__overlay">
+                  <div class="About-body-item-overlay">
                     <img
                       src="./theme/frontend/images/ico_users.svg"
                       alt=""
-                      class="img-icon about-body-item__icon"
+                      class="img-ico About-body-item-overlay__ico"
                     />
-                    <span class="about-body-item__label">Super team</span>
+                    <span class="About-body-item-overlay__label"
+                      >Super team</span
+                    >
                   </div>
-                  <div class="about-body-item__card-bottom"></div>
+                  <div class="About-body-item__bottom"></div>
                 </div>
 
-                <div class="about-body-item">
+                <div class="About-body-item">
                   <img
                     src="./theme/frontend/images/img_item03.png"
                     alt="Service Image"
-                    class="about-body-item__img"
+                    class="About-body-item__img"
                   />
-                  <div class="about-body-item__overlay">
+                  <div class="About-body-item-overlay">
                     <img
                       src="./theme/frontend/images/ico_users.svg"
                       alt=""
-                      class="img-icon about-body-item__icon"
+                      class="img-ico About-body-item-overlay__ico"
                     />
-                    <span class="about-body-item__label">Super team</span>
+                    <span class="About-body-item-overlay__label"
+                      >Super team</span
+                    >
                   </div>
-                  <div class="about-body-item__card-bottom"></div>
+                  <div class="About-body-item-overlay__bottom"></div>
                 </div>
-                <div class="about-body-item">
+                <div class="About-body-item">
                   <img
                     src="./theme/frontend/images/img_item02.png"
                     alt="Service Image"
-                    class="about-body-item__img"
+                    class="About-body-item__img"
                   />
-                  <div class="about-body-item__overlay">
+                  <div class="About-body-item-overlay">
                     <img
                       src="./theme/frontend/images/ico_users.svg"
                       alt=""
-                      class="img-icon about-body-item__icon"
+                      class="img-ico About-body-item-overlay__ico"
                     />
-                    <span class="about-body-item__label">Super team</span>
+                    <span class="About-body-item-overlay__label"
+                      >Super team</span
+                    >
                   </div>
-                  <div class="about-body-item__card-bottom"></div>
+                  <div class="About-body-item__bottom"></div>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </section>
-      <!-- /about -->
+      <!-- /About -->
 
-      <section class="facts">
-        <div class="container">
-          <div class="facts-list">
-            <div class="facts-item">
-              <span class="facts-item__num">42</span>
-              <span class="facts-item__label">Web design projects</span>
+      <section id="about" class="Fact js-section">
+        <div class="Container">
+          <div class="Fact-list">
+            <div class="Fact-item">
+              <span class="Fact-item__num">42</span>
+              <span class="Fact-item__label">Web design projects</span>
             </div>
 
-            <div class="facts-item">
-              <span class="facts-item__num">123</span>
-              <span class="facts-item__label">Happy client</span>
+            <div class="Fact-item">
+              <span class="Fact-item__num">123</span>
+              <span class="Fact-item__label">Happy client</span>
             </div>
-            <div class="facts-item">
-              <span class="facts-item__num">15</span>
-              <span class="facts-item__label">Award winner</span>
-            </div>
-
-            <div class="facts-item">
-              <span class="facts-item__num">99</span>
-              <span class="facts-item__label">Cup of coffee</span>
+            <div class="Fact-item">
+              <span class="Fact-item__num">15</span>
+              <span class="Fact-item__label">Award winner</span>
             </div>
 
-            <div class="facts-item">
-              <span class="facts-item__num">24</span>
-              <span class="facts-item__label">Members</span>
+            <div class="Fact-item">
+              <span class="Fact-item__num">99</span>
+              <span class="Fact-item__label">Cup of coffee</span>
+            </div>
+
+            <div class="Fact-item">
+              <span class="Fact-item__num">24</span>
+              <span class="Fact-item__label">Members</span>
             </div>
           </div>
         </div>
       </section>
-      <!-- /facts -->
+      <!-- /Fact -->
 
-      <section class="section section--service">
-        <div class="container">
-          <div class="service">
-            <div class="section-header service-header">
-              <p class="section-header__eyebrow">We work with</p>
-              <h2 class="section-header__ttl">Amazing service</h2>
+      <section id="service" class="Section Section--service js-section">
+        <div class="Container">
+          <div class="Service">
+            <div class="Section-header Service-header">
+              <p class="Section-header__eyebrow">We work with</p>
+              <h2 class="Section-header__ttl">Amazing service</h2>
             </div>
-            <div class="service-list">
-              <div class="service-item">
+            <div class="Service-list">
+              <div class="Service-item">
                 <img
                   src="./theme/frontend/images/ico_alarm.svg"
                   alt=""
-                  class="img-icon service-item__icon"
+                  class="img-ico Service-item__ico"
                 />
-                <div class="service-item-content">
-                  <h3 class="service-item-content__title">Photography</h3>
-                  <p class="service-item-content__description">
+                <div class="Service-item-content">
+                  <h3 class="Service-item-content__ttl">Photography</h3>
+                  <p class="Service-item-content__desc">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                     do eiusmod tempor.
                   </p>
                 </div>
               </div>
-              <div class="service-item">
+              <div class="Service-item">
                 <img
                   src="./theme/frontend/images/ico_linegraph.svg"
                   alt=""
-                  class="img-icon service-item__icon"
+                  class="img-ico Service-item__ico"
                 />
-                <div class="service-item-content">
-                  <h3 class="service-item-content__title">Photography</h3>
-                  <p class="service-item-content__description">
+                <div class="Service-item-content">
+                  <h3 class="Service-item-content__ttl">Photography</h3>
+                  <p class="Service-item-content__desc">
                     Ipsum dolor sit amet, consectetur adipiscing elit, sed do
                     eiusmod tempor.
                   </p>
                 </div>
               </div>
-              <div class="service-item">
+              <div class="Service-item">
                 <img
                   src="./theme/frontend/images/ico_computercheck.svg"
                   alt=""
-                  class="img-icon service-item__icon"
+                  class="img-ico Service-item__ico"
                 />
-                <div class="service-item-content">
-                  <h3 class="service-item-content__title">Photography</h3>
-                  <p class="service-item-content__description">
+                <div class="Service-item-content">
+                  <h3 class="Service-item-content__ttl">Photography</h3>
+                  <p class="Service-item-content__desc">
                     Dolor sit amet, consectetur adipiscing elit, sed do eiusmod
                     tempor.
                   </p>
                 </div>
               </div>
-              <div class="service-item">
+              <div class="Service-item">
                 <img
                   src="./theme/frontend/images/ico_book.svg"
                   alt=""
-                  class="img-icon service-item__icon"
+                  class="img-ico Service-item__ico"
                 />
-                <div class="service-item-content">
-                  <h3 class="service-item-content__title">Photography</h3>
-                  <p class="service-item-content__description">
+                <div class="Service-item-content">
+                  <h3 class="Service-item-content__ttl">Photography</h3>
+                  <p class="Service-item-content__desc">
                     Ipsum dolor sit amet, consectetur adipiscing elit, sed do
                     eiusmod.
                   </p>
                 </div>
               </div>
-              <div class="service-item">
+              <div class="Service-item">
                 <img
                   src="./theme/frontend/images/ico_home.svg"
                   alt=""
-                  class="img-icon service-item__icon"
+                  class="img-ico Service-item__ico"
                 />
-                <div class="service-item-content">
-                  <h3 class="service-item-content__title">Photography</h3>
-                  <p class="service-item-content__description">
+                <div class="Service-item-content">
+                  <h3 class="Service-item-content__ttl">Photography</h3>
+                  <p class="Service-item-content__desc">
                     Ipsum dolor sit amet, consectetur adipiscing elit, sed do
                     eiusmod.
                   </p>
                 </div>
               </div>
-              <div class="service-item">
+              <div class="Service-item">
                 <img
                   src="./theme/frontend/images/ico_img.svg"
                   alt=""
-                  class="img-icon service-item__icon"
+                  class="img-ico Service-item__ico"
                 />
-                <div class="service-item-content">
-                  <h3 class="service-item-content__title">Photography</h3>
-                  <p class="service-item-content__description">
+                <div class="Service-item-content">
+                  <h3 class="Service-item-content__ttl">Photography</h3>
+                  <p class="Service-item-content__desc">
                     Ipsum dolor sit amet, consectetur adipiscing elit, sed do
                     eiusmod.
                   </p>
@@ -320,24 +382,24 @@
           </div>
         </div>
       </section>
-      <!-- /service -->
+      <!-- /Service -->
 
-      <section class="section section--feature">
-        <div class="container">
-          <div class="feature">
-            <div class="section-header feature-header">
-              <p class="section-header__eyebrow">For all services</p>
-              <h2 class="section-header__ttl">Unique design</h2>
+      <section id="feature" class="Section Section--feature js-section">
+        <div class="Container">
+          <div class="Feature">
+            <div class="Section-header Feature-header">
+              <p class="Section-header__eyebrow">For all services</p>
+              <h2 class="Section-header__ttl">Unique design</h2>
             </div>
-            <div class="feature-body">
-              <div class="feature-body-wrapper">
+            <div class="Feature-body">
+              <div class="Feature-body-wrapper">
                 <img
-                  class="feature-body-wrapper__main"
+                  class="Feature-body-wrapper__main"
                   src="./theme/frontend/images/img_device01.png"
                   alt=""
                 />
                 <img
-                  class="feature-body-wrapper__small"
+                  class="Feature-body-wrapper__small"
                   src="./theme/frontend/images/img_device02.png"
                   alt=""
                 />
@@ -346,48 +408,52 @@
           </div>
         </div>
       </section>
-      <!-- /feature -->
+      <!-- /Feature -->
 
-      <section class="section section--service2">
-        <div class="container">
-          <div class="service2">
-            <div class="section-header service2-header">
-              <p class="section-header__eyebrow">Services</p>
-              <h2 class="section-header__ttl">What we do</h2>
-              <p class="section-header__desc">
+      <section id="service2" class="Section Section--service2 js-section">
+        <div class="Container">
+          <div class="Service2">
+            <div class="Section-header Service2-header">
+              <p class="Section-header__eyebrow">Services</p>
+              <h2 class="Section-header__ttl">What we do</h2>
+              <p class="Section-header__desc">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
                 enim ad minim veniam, quis nostrud exercitation ullamco laboris
                 nisi ut aliquip ex ea commodo consequat.
               </p>
             </div>
-            <div class="service2-body">
-              <div class="service2-image">
+            <div class="Service2-body">
+              <div class="Service2-body-image">
                 <img src="./theme/frontend/images/img_item03.png" alt="" />
               </div>
-              <div class="service2-content">
+              <div class="Service2-body-content">
                 <div
-                  class="service2-item service2-item--is-open js-service2-item"
+                  class="Service2-body-content-item Service2-body-content-item--open js-service2-item"
                 >
                   <div
-                    class="service2-item-header js-service2-trigger"
+                    class="Service2-body-content-item-header js-service2-trigger"
                     role="button"
                     tabindex="0"
                   >
                     <img
                       src="./theme/frontend/images/ico_picture02.svg"
                       alt=""
-                      class="service2-item-header__icon"
+                      class="Service2-body-content-item-header__ico"
                     />
-                    <h4 class="service2-item-header__title">Photography</h4>
+                    <h4 class="Service2-body-content-item-header__ttl">
+                      Photography
+                    </h4>
                     <img
                       src="./theme/frontend/images/ico_arrowup.svg"
                       alt=""
-                      class="service2-item-header__btn"
+                      class="Service2-body-content-item-header__btn"
                     />
                   </div>
-                  <div class="service2-item-content js-service2-content">
-                    <div class="service2-item-content__desc">
+                  <div
+                    class="Service2-body-content-item-content js-service2-content"
+                  >
+                    <div class="Service2-body-content-item-content__desc">
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                       sed do eiusmod tempor incididunt ut labore et dolore magna
                       aliqua. Ut enim ad minim veniam, quis nostrud exercitation
@@ -399,26 +465,30 @@
                     </div>
                   </div>
                 </div>
-                <div class="service2-item js-service2-item">
+                <div class="Service2-body-content-item js-service2-item">
                   <div
-                    class="service2-item-header js-service2-trigger"
+                    class="Service2-body-content-item-header js-service2-trigger"
                     role="button"
                     tabindex="0"
                   >
                     <img
                       src="./theme/frontend/images/ico_equalizer.svg"
                       alt=""
-                      class="service2-item-header__icon"
+                      class="Service2-body-content-item-header__ico"
                     />
-                    <h4 class="service2-item-header__title">Creativity</h4>
+                    <h4 class="Service2-body-content-item-header__ttl">
+                      Creativity
+                    </h4>
                     <img
                       src="./theme/frontend/images/ico_arrowup.svg"
                       alt=""
-                      class="service2-item-header__btn"
+                      class="Service2-body-content-item-header__btn"
                     />
                   </div>
-                  <div class="service2-item-content js-service2-content">
-                    <div class="service2-item-content__desc">
+                  <div
+                    class="Service2-body-content-item-content js-service2-content"
+                  >
+                    <div class="Service2-body-content-item-content__desc">
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                       sed do eiusmod tempor incididunt ut labore et dolore magna
                       aliqua... Lorem ipsum dolor sit amet, consectetur
@@ -429,26 +499,30 @@
                     </div>
                   </div>
                 </div>
-                <div class="service2-item js-service2-item">
+                <div class="Service2-body-content-item js-service2-item">
                   <div
-                    class="service2-item-header js-service2-trigger"
+                    class="Service2-body-content-item-header js-service2-trigger"
                     role="button"
                     tabindex="0"
                   >
                     <img
                       src="./theme/frontend/images/ico_bullseye.svg"
                       alt=""
-                      class="service2-item-header__icon"
+                      class="Service2-body-content-item-header__ico"
                     />
-                    <h4 class="service2-item-header__title">Web design</h4>
+                    <h4 class="Service2-body-content-item-header__ttl">
+                      Web design
+                    </h4>
                     <img
                       src="./theme/frontend/images/ico_arrowup.svg"
                       alt=""
-                      class="service2-item-header__btn"
+                      class="Service2-body-content-item-header__btn"
                     />
                   </div>
-                  <div class="service2-item-content js-service2-content">
-                    <div class="service2-item-content__desc">
+                  <div
+                    class="Service2-body-content-item-content js-service2-content"
+                  >
+                    <div class="Service2-body-content-item-content__desc">
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                       sed do eiusmod tempor incididunt ut labore et dolore magna
                       aliqua... Lorem ipsum dolor sit amet, consectetur
@@ -464,18 +538,20 @@
           </div>
         </div>
       </section>
-      <!-- /service2 -->
+      <!-- /Service2 -->
 
-      <section class="quotes">
-        <div class="container">
-          <div class="quotes-slider js-quotes-slider">
-            <div class="quotes-item js-quotes-item quotes-item--is-active">
+      <section id="quote" class="Quote js-section">
+        <div class="Container">
+          <div class="Quote-slider js-quote-slider">
+            <div
+              class="Quote-slider-item js-quote-item Quote-slider-item--active"
+            >
               <img
                 src="./theme/frontend/images/ico_chat.svg"
                 alt=""
-                class="img-icon quotes-item__icon"
+                class="img-ico Quote-slider-item__ico"
               />
-              <div class="quotes-item__content">
+              <div class="Quote-slider-item__content">
                 <p>
                   “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                   do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -484,13 +560,13 @@
                 <h5>Jon Doe</h5>
               </div>
             </div>
-            <div class="quotes-item js-quotes-item">
+            <div class="Quote-slider-item js-quote-item">
               <img
                 src="./theme/frontend/images/ico_chat.svg"
                 alt=""
-                class="img-icon quotes-item__icon"
+                class="img-ico Quote-slider-item__ico"
               />
-              <div class="quotes-item__content">
+              <div class="Quote-slider-item__content">
                 <p>
                   “Incididunt ut labore et dolore magna aliqua. Ut enim ad minim
                   veniam, quis nostrud exercitation.”
@@ -498,13 +574,13 @@
                 <h5>Jon Doe</h5>
               </div>
             </div>
-            <div class="quotes-item js-quotes-item">
+            <div class="Quote-slider-item js-quote-item">
               <img
                 src="./theme/frontend/images/ico_chat.svg"
                 alt=""
-                class="img-icon quotes-item__icon"
+                class="img-ico Quote-slider-item__ico"
               />
-              <div class="quotes-item__content">
+              <div class="Quote-slider-item__content">
                 <p>
                   “Tempor incididunt ut labore et dolore magna aliqua. Ut enim
                   ad minim veniam, quis nostrud exercitation.”
@@ -514,35 +590,35 @@
             </div>
 
             <button
-              class="quotes-slider__btn js-quotes-prev quotes-slider__btn--prev"
+              class="Quote-slider__btn js-quote-prev Quote-slider__btn--prev"
             >
               <img
                 src="./theme/frontend/images/ico_arrowright.svg"
                 alt=""
-                class="img-icon"
+                class="img-ico"
               />
             </button>
             <button
-              class="quotes-slider__btn js-quotes-next quotes-slider__btn--next"
+              class="Quote-slider__btn js-quote-next Quote-slider__btn--next"
             >
               <img
                 src="./theme/frontend/images/ico_arrowright.svg"
                 alt=""
-                class="img-icon"
+                class="img-ico"
               />
             </button>
           </div>
         </div>
       </section>
-      <!-- /quotes -->
+      <!-- /Quote -->
 
-      <section class="section section--our-team">
-        <div class="container">
-          <div class="our-team">
-            <div class="section-header our-team-header">
-              <p class="section-header__eyebrow">Who we are</p>
-              <h2 class="section-header__ttl">Meet our team</h2>
-              <p class="section-header__desc">
+      <section id="our-team" class="Section Section--our-team js-section">
+        <div class="Container">
+          <div class="Our-team">
+            <div class="Section-header Our-team-header">
+              <p class="Section-header__eyebrow">Who we are</p>
+              <h2 class="Section-header__ttl">Meet our team</h2>
+              <p class="Section-header__desc">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
                 enim ad minim veniam, quis nostrud exercitation ullamco laboris
@@ -550,224 +626,226 @@
               </p>
             </div>
 
-            <div class="our-team-body">
-              <div class="our-team-item">
-                <div class="our-team-item-card">
+            <div class="Our-team-body">
+              <div class="Our-team-item">
+                <div class="Our-team-item-card">
                   <img
                     src="./theme/frontend/images/img_user01.png"
                     alt=""
-                    class="our-team-item-card__img"
+                    class="Our-team-item-card__img"
                   />
-                  <div class="our-team-item-card__overlay">
-                    <ul class="our-team-item-card__socials">
+                  <div class="Our-team-item-card-overlay">
+                    <ul class="Our-team-item-card-overlay__socials">
                       <li><i class="fa fa-facebook icon"></i></li>
                       <li><i class="fa fa-twitter icon"></i></li>
                       <li><i class="fa fa-pinterest-p icon"></i></li>
                       <li><i class="fa fa-instagram icon"></i></li>
                     </ul>
                   </div>
-                  <div class="our-team-item-card__shadow"></div>
+                  <div class="Our-team-item-card__shadow"></div>
                 </div>
-                <div class="our-team-item-info">
-                  <h3 class="our-team-item-info__name">Matthew Dix</h3>
-                  <p class="our-team-item-info__position">Graphic Design</p>
+                <div class="Our-team-item-info">
+                  <h3 class="Our-team-item-info__name">Matthew Dix</h3>
+                  <p class="Our-team-item-info__position">Graphic Design</p>
                 </div>
               </div>
-              <div class="our-team-item">
-                <div class="our-team-item-card">
+              <div class="Our-team-item">
+                <div class="Our-team-item-card">
                   <img
                     src="./theme/frontend/images/img_user02.png"
                     alt=""
-                    class="our-team-item-card__img"
+                    class="Our-team-item-card__img"
                   />
-                  <div class="our-team-item-card__overlay">
-                    <ul class="our-team-item-card__socials">
+                  <div class="Our-team-item-card-overlay">
+                    <ul class="Our-team-item-card-overlay__socials">
                       <li><i class="fa fa-facebook icon"></i></li>
                       <li><i class="fa fa-twitter icon"></i></li>
                       <li><i class="fa fa-pinterest-p icon"></i></li>
                       <li><i class="fa fa-instagram icon"></i></li>
                     </ul>
                   </div>
-                  <div class="our-team-item-card__shadow"></div>
+                  <div class="Our-team-item-card__shadow"></div>
                 </div>
-                <div class="our-team-item-info">
-                  <h3 class="our-team-item-info__name">Christopher Campbell</h3>
-                  <p class="our-team-item-info__position">Branding/UX design</p>
+                <div class="Our-team-item-info">
+                  <h3 class="Our-team-item-info__name">Christopher Campbell</h3>
+                  <p class="Our-team-item-info__position">Branding/UX design</p>
                 </div>
               </div>
-              <div class="our-team-item">
-                <div class="our-team-item-card">
+              <div class="Our-team-item">
+                <div class="Our-team-item-card">
                   <img
                     src="./theme/frontend/images/img_user01.png"
                     alt=""
-                    class="our-team-item-card__img"
+                    class="Our-team-item-card__img"
                   />
-                  <div class="our-team-item-card__overlay">
-                    <ul class="our-team-item-card__socials">
+                  <div class="Our-team-item-card-overlay">
+                    <ul class="Our-team-item-card-overlay__socials">
                       <li><i class="fa fa-facebook icon"></i></li>
                       <li><i class="fa fa-twitter icon"></i></li>
                       <li><i class="fa fa-pinterest-p icon"></i></li>
                       <li><i class="fa fa-instagram icon"></i></li>
                     </ul>
                   </div>
-                  <div class="our-team-item-card__shadow"></div>
+                  <div class="Our-team-item-card__shadow"></div>
                 </div>
-                <div class="our-team-item-info">
-                  <h3 class="our-team-item-info__name">Jane Doe</h3>
-                  <p class="our-team-item-info__position">Developer</p>
+                <div class="Our-team-item-info">
+                  <h3 class="Our-team-item-info__name">Jane Doe</h3>
+                  <p class="Our-team-item-info__position">Developer</p>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </section>
-      <!-- /our-team -->
+      <!-- /Our-team -->
 
-      <section class="logos">
+      <section id="Logo" class="Logo js-section">
         <img src="./theme/frontend/images/img_logos.png" alt="" />
       </section>
-      <!-- /logos -->
+      <!-- /Logo -->
 
-      <section class="section section--work">
-        <div class="work">
-          <div class="section-header work-header">
-            <p class="section-header__eyebrow">What we do</p>
-            <h2 class="section-header__ttl">Somwe of our work</h2>
-            <p class="section-header__desc">
+      <section id="work" class="Section Section--work js-section">
+        <div class="Work">
+          <div class="Section-header Work-header">
+            <p class="Section-header__eyebrow">What we do</p>
+            <h2 class="Section-header__ttl">Somwe of our work</h2>
+            <p class="Section-header__desc">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
               enim ad minim veniam, quis nostrud exercitation ullamco laboris
               nisi ut aliquip ex ea commodo consequat.
             </p>
           </div>
-          <div class="work-body">
-            <div class="work-item">
+          <div class="Work-body">
+            <div class="Work-item">
               <img
                 src="./theme/frontend/images/img_item01.png"
                 alt=""
-                class="work-item__image"
+                class="Work-item__img"
               />
-              <div class="work-item-overlay">
+              <div class="Work-item-overlay">
                 <img
                   src="./theme/frontend/images/ico_picture01.svg"
                   alt=""
-                  class="img-icon work-item-overlay__ico"
+                  class="img-ico Work-item-overlay__ico"
                 />
-                <h3 class="work-item-overlay__ttl">Creatively designed</h3>
-                <p class="work-item-overlay__desc">Lorem ipsum dolor sit</p>
+                <h3 class="Work-item-overlay__ttl">Creatively designed</h3>
+                <p class="Work-item-overlay__desc">Lorem ipsum dolor sit</p>
               </div>
             </div>
-            <div class="work-item">
+            <div class="Work-item">
               <img
                 src="./theme/frontend/images/img_item02.png"
                 alt=""
-                class="work-item__image"
+                class="Work-item__img"
               />
-              <div class="work-item-overlay">
+              <div class="Work-item-overlay">
                 <img
                   src="./theme/frontend/images/ico_picture01.svg"
                   alt=""
-                  class="img-icon work-item-overlay__ico"
+                  class="img-ico Work-item-overlay__ico"
                 />
-                <h3 class="work-item-overlay__ttl">Creatively designed</h3>
-                <p class="work-item-overlay__desc">Lorem ipsum dolor sit</p>
+                <h3 class="Work-item-overlay__ttl">Creatively designed</h3>
+                <p class="Work-item-overlay__desc">Lorem ipsum dolor sit</p>
               </div>
             </div>
-            <div class="work-item work-item--tall">
+            <div class="Work-item Work-item--tall">
               <img
                 src="./theme/frontend/images/img_item05.png"
                 alt=""
-                class="work-item__image"
+                class="Work-item__img"
               />
-              <div class="work-item-overlay">
+              <div class="Work-item-overlay">
                 <img
                   src="./theme/frontend/images/ico_picture01.svg"
                   alt=""
-                  class="img-icon work-item-overlay__ico"
+                  class="img-ico Work-item-overlay__ico"
                 />
-                <h3 class="work-item-overlay__ttl">Creatively designed</h3>
-                <p class="work-item-overlay__desc">Lorem ipsum dolor sit</p>
+                <h3 class="Work-item-overlay__ttl">Creatively designed</h3>
+                <p class="Work-item-overlay__desc">Lorem ipsum dolor sit</p>
               </div>
             </div>
-            <div class="work-item">
+            <div class="Work-item">
               <img
                 src="./theme/frontend/images/img_item03.png"
                 alt=""
-                class="work-item__image"
+                class="Work-item__img"
               />
-              <div class="work-item-overlay">
+              <div class="Work-item-overlay">
                 <img
                   src="./theme/frontend/images/ico_picture01.svg"
                   alt=""
-                  class="img-icon work-item-overlay__ico"
+                  class="img-ico Work-item-overlay__ico"
                 />
-                <h3 class="work-item-overlay__ttl">Creatively designed</h3>
-                <p class="work-item-overlay__desc">Lorem ipsum dolor sit</p>
+                <h3 class="Work-item-overlay__ttl">Creatively designed</h3>
+                <p class="Work-item-overlay__desc">Lorem ipsum dolor sit</p>
               </div>
             </div>
-            <div class="work-item">
+            <div class="Work-item">
               <img
                 src="./theme/frontend/images/img_item04.png"
                 alt=""
-                class="work-item__image"
+                class="Work-item__img"
               />
-              <div class="work-item-overlay">
+              <div class="Work-item-overlay">
                 <img
                   src="./theme/frontend/images/ico_picture01.svg"
                   alt=""
-                  class="img-icon work-item-overlay__ico"
+                  class="img-ico Work-item-overlay__ico"
                 />
-                <h3 class="work-item-overlay__ttl">Creatively designed</h3>
-                <p class="work-item-overlay__desc">Lorem ipsum dolor sit</p>
+                <h3 class="Work-item-overlay__ttl">Creatively designed</h3>
+                <p class="Work-item-overlay__desc">Lorem ipsum dolor sit</p>
               </div>
             </div>
-            <div class="work-item">
+            <div class="Work-item">
               <img
                 src="./theme/frontend/images/img_item01.png"
                 alt=""
-                class="work-item__image"
+                class="Work-item__img"
               />
-              <div class="work-item-overlay">
+              <div class="Work-item-overlay">
                 <img
                   src="./theme/frontend/images/ico_picture01.svg"
                   alt=""
-                  class="img-icon work-item-overlay__ico"
+                  class="img-ico Work-item-overlay__ico"
                 />
-                <h3 class="work-item-overlay__ttl">Creatively designed</h3>
-                <p class="work-item-overlay__desc">Lorem ipsum dolor sit</p>
+                <h3 class="Work-item-overlay__ttl">Creatively designed</h3>
+                <p class="Work-item-overlay__desc">Lorem ipsum dolor sit</p>
               </div>
             </div>
-            <div class="work-item">
+            <div class="Work-item">
               <img
                 src="./theme/frontend/images/img_item01.png"
                 alt=""
-                class="work-item__image"
+                class="Work-item__img"
               />
-              <div class="work-item-overlay">
+              <div class="Work-item-overlay">
                 <img
                   src="./theme/frontend/images/ico_picture01.svg"
                   alt=""
-                  class="img-icon work-item-overlay__ico"
+                  class="img-ico Work-item-overlay__ico"
                 />
-                <h3 class="work-item-overlay__ttl">Creatively designed</h3>
-                <p class="work-item-overlay__desc">Lorem ipsum dolor sit</p>
+                <h3 class="Work-item-overlay__ttl">Creatively designed</h3>
+                <p class="Work-item-overlay__desc">Lorem ipsum dolor sit</p>
               </div>
             </div>
           </div>
         </div>
       </section>
-      <!-- /work -->
+      <!-- /Work -->
 
-      <section class="quotes">
-        <div class="container">
-          <div class="quotes-slider js-quotes-slider">
-            <div class="quotes-item js-quotes-item quotes-item--is-active">
+      <section id="quotes1" class="Quote js-section">
+        <div class="Container">
+          <div class="Quote-slider js-quote-slider">
+            <div
+              class="Quote-slider-item js-quote-item Quote-slider-item--active"
+            >
               <img
                 src="./theme/frontend/images/img_avatar01.png"
                 alt=""
-                class="img-icon quotes-item__icon quotes-item__icon--no-border"
+                class="img-ico Quote-slider-item__ico Quote-slider-item__ico--no-border"
               />
-              <div class="quotes-item__content">
+              <div class="Quote-slider-item__content">
                 <p>
                   “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                   do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -776,13 +854,13 @@
                 <h5>Jon Doe</h5>
               </div>
             </div>
-            <div class="quotes-item js-quotes-item">
+            <div class="Quote-slider-item js-quote-item">
               <img
                 src="./theme/frontend/images/img_avatar02.png"
                 alt=""
-                class="img-icon quotes-item__icon quotes-item__icon--no-border"
+                class="img-ico Quote-slider-item__ico Quote-slider-item__ico--no-border"
               />
-              <div class="quotes-item__content">
+              <div class="Quote-slider-item__content">
                 <p>
                   “Incididunt ut labore et dolore magna aliqua. Ut enim ad minim
                   veniam, quis nostrud exercitation.”
@@ -790,13 +868,13 @@
                 <h5>Jon Doe</h5>
               </div>
             </div>
-            <div class="quotes-item js-quotes-item">
+            <div class="Quote-slider-item js-quote-item">
               <img
                 src="./theme/frontend/images/img_avatar03.png"
                 alt=""
-                class="img-icon quotes-item__icon quotes-item__icon--no-border"
+                class="img-ico Quote-slider-item__ico Quote-slider-item__ico--no-border"
               />
-              <div class="quotes-item__content">
+              <div class="Quote-slider-item__content">
                 <p>
                   “Tempor incididunt ut labore et dolore magna aliqua. Ut enim
                   ad minim veniam, quis nostrud exercitation.”
@@ -806,21 +884,21 @@
             </div>
 
             <button
-              class="quotes-slider__btn js-quotes-prev quotes-slider__btn--prev"
+              class="Quote-slider__btn js-quote-prev Quote-slider__btn--prev"
             >
               <img
                 src="./theme/frontend/images/ico_arrowright.svg"
                 alt=""
-                class="img-icon"
+                class="img-ico"
               />
             </button>
             <button
-              class="quotes-slider__btn js-quotes-next quotes-slider__btn--next"
+              class="Quote-slider__btn js-quote-next Quote-slider__btn--next"
             >
               <img
                 src="./theme/frontend/images/ico_arrowright.svg"
                 alt=""
-                class="img-icon"
+                class="img-ico"
               />
             </button>
           </div>
@@ -828,72 +906,79 @@
       </section>
       <!-- /qoutes -->
 
-      <section class="section section--testimonials">
-        <div class="container">
-          <div class="testimonials">
-            <div class="section-header testimonials-header">
-              <p class="section-header__eyebrow">Happy clients</p>
-              <h2 class="section-header__ttl">What people says</h2>
+      <section
+        id="testimonials"
+        class="Section Section--testimonials js-section"
+      >
+        <div class="Container">
+          <div class="Testimonials">
+            <div class="Section-header Testimonials-header">
+              <p class="Section-header__eyebrow">Happy clients</p>
+              <h2 class="Section-header__ttl">What people says</h2>
             </div>
-            <div class="testimonials-body">
-              <div class="testimonials-item">
-                <div class="testimonials-item-avatar">
+            <div class="Testimonials-body">
+              <div class="Testimonials-body-item">
+                <div class="Testimonials-body-item-avatar">
                   <img src="./theme/frontend/images/img_avatar01.png" alt="" />
                 </div>
-                <div class="testimonials-item-content">
-                  <h4 class="testimonials-item-content__name">Matthew Dix</h4>
-                  <p class="testimonials-item-content__role">
+                <div class="Testimonials-body-item-content">
+                  <h4 class="Testimonials-body-item-content__name">
+                    Matthew Dix
+                  </h4>
+                  <p class="Testimonials-body-item-content__role">
                     Graphic Designer
                   </p>
-                  <p class="testimonials-item-content__text">
+                  <p class="Testimonials-body-item-content__text">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                     do eiusmod tempor incididunt ut labore et dolore magna
                     aliqua. Ut enim ad minim.
                   </p>
                 </div>
               </div>
-              <div class="testimonials-item">
-                <div class="testimonials-item-avatar">
+              <div class="Testimonials-body-item">
+                <div class="Testimonials-body-item-avatar">
                   <img src="./theme/frontend/images/img_avatar02.png" alt="" />
                 </div>
-                <div class="testimonials-item-content">
-                  <h4 class="testimonials-item-content__name">
+                <div class="Testimonials-body-item-content">
+                  <h4 class="Testimonials-body-item-content__name">
                     Nick Karvounis
                   </h4>
-                  <p class="testimonials-item-content__role">Dev</p>
-                  <p class="testimonials-item-content__text">
+                  <p class="Testimonials-body-item-content__role">Dev</p>
+                  <p class="Testimonials-body-item-content__text">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                     do eiusmod tempor incididunt ut labore et dolore magna
                     aliqua. Ut enim ad minim.
                   </p>
                 </div>
               </div>
-              <div class="testimonials-item">
-                <div class="testimonials-item-avatar">
+              <div class="Testimonials-body-item">
+                <div class="Testimonials-body-item-avatar">
                   <img src="./theme/frontend/images/img_avatar03.png" alt="" />
                 </div>
-                <div class="testimonials-item-content">
-                  <h4 class="testimonials-item-content__name">
+                <div class="Testimonials-body-item-content">
+                  <h4 class="Testimonials-body-item-content__name">
                     Jaelynn Castillo
                   </h4>
-                  <p class="testimonials-item-content__role">
+                  <p class="Testimonials-body-item-content__role">
                     Graphic Designer
                   </p>
-                  <p class="testimonials-item-content__text">
+                  <p class="Testimonials-body-item-content__text">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                     do eiusmod tempor incididunt ut labore et dolore magna
                     aliqua. Ut enim ad minim.
                   </p>
                 </div>
               </div>
-              <div class="testimonials-item">
-                <div class="testimonials-item-avatar">
+              <div class="Testimonials-body-item">
+                <div class="Testimonials-body-item-avatar">
                   <img src="./theme/frontend/images/img_avatar04.png" alt="" />
                 </div>
-                <div class="testimonials-item-content">
-                  <h4 class="testimonials-item-content__name">Mike Petrucci</h4>
-                  <p class="testimonials-item-content__role">Designer</p>
-                  <p class="testimonials-item-content__text">
+                <div class="Testimonials-body-item-content">
+                  <h4 class="Testimonials-body-item-content__name">
+                    Mike Petrucci
+                  </h4>
+                  <p class="Testimonials-body-item-content__role">Designer</p>
+                  <p class="Testimonials-body-item-content__text">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                     do eiusmod tempor incididunt ut labore et dolore magna
                     aliqua. Ut enim ad minim.
@@ -904,125 +989,125 @@
           </div>
         </div>
       </section>
-      <!-- /testimonials -->
+      <!-- /Testimonials -->
 
-      <section class="section section--blog">
-        <div class="container">
-          <div class="blog">
-            <div class="section-header blog-header">
-              <p class="section-header__eyebrow">Our stories</p>
-              <h2 class="section-header__ttl">Latest blog</h2>
+      <section id="Blog" class="Section Section--Blog js-section">
+        <div class="Container">
+          <div class="Blog">
+            <div class="Section-header Blog-header">
+              <p class="Section-header__eyebrow">Our stories</p>
+              <h2 class="Section-header__ttl">Latest blog</h2>
             </div>
-            <div class="blog-body">
-              <div class="blog-item">
-                <div class="blog-item-img">
+            <div class="Blog-body">
+              <div class="Blog-body-item">
+                <div class="Blog-body-item-img">
                   <img src="./theme/frontend/images/img_item02.png" alt="" />
-                  <div class="blog-item-img__date">
-                    <span class="blog-item-img__day">14</span>
-                    <span class="blog-item-img__month">Jan</span>
+                  <div class="Blog-body-item-img__date">
+                    <span class="Blog-body-item-img__day">14</span>
+                    <span class="Blog-body-item-img__month">Jan</span>
                   </div>
                 </div>
 
-                <div class="blog-item-content">
-                  <h4 class="blog-item-content__title">
+                <div class="Blog-body-item-content">
+                  <h4 class="Blog-body-item-content__ttl">
                     Lorem ipsum dolor sit amet
                   </h4>
-                  <p class="blog-item-content__excerpt">
+                  <p class="Blog-body-item-content__excerpt">
                     consectetur adipiscing elit, sed do eiusmod tempor.
                     incididunt ut labore
                   </p>
                 </div>
 
-                <div class="blog-item-meta">
-                  <div class="blog-item-meta__item">
+                <div class="Blog-body-item-meta">
+                  <div class="Blog-body-item-meta__item">
                     <img
                       src="./theme/frontend/images/ico_view.svg"
                       alt=""
-                      class="img-icon"
+                      class="img-ico"
                     />
                     <span>542</span>
                   </div>
-                  <div class="blog-item-meta__item">
+                  <div class="Blog-body-item-meta__item">
                     <img
                       src="./theme/frontend/images/ico_chat.svg"
                       alt=""
-                      class="img-icon"
+                      class="img-ico"
                     />
                     <span>542</span>
                   </div>
                 </div>
               </div>
-              <div class="blog-item">
-                <div class="blog-item-img">
+              <div class="Blog-body-item">
+                <div class="Blog-body-item-img">
                   <img src="./theme/frontend/images/img_item03.png" alt="" />
-                  <div class="blog-item-img__date">
-                    <span class="blog-item-img__day">14</span>
-                    <span class="blog-item-img__month">Jan</span>
+                  <div class="Blog-body-item-img__date">
+                    <span class="Blog-body-item-img__day">14</span>
+                    <span class="Blog-body-item-img__month">Jan</span>
                   </div>
                 </div>
 
-                <div class="blog-item-content">
-                  <h4 class="blog-item-content__title">
+                <div class="Blog-body-item-content">
+                  <h4 class="Blog-body-item-content__ttl">
                     Lorem ipsum dolor sit amet
                   </h4>
-                  <p class="blog-item-content__excerpt">
+                  <p class="Blog-body-item-content__excerpt">
                     consectetur adipiscing elit, sed do eiusmod tempor.
                     incididunt ut labore
                   </p>
                 </div>
 
-                <div class="blog-item-meta">
-                  <div class="blog-item-meta__item">
+                <div class="Blog-body-item-meta">
+                  <div class="Blog-body-item-meta__item">
                     <img
                       src="./theme/frontend/images/ico_view.svg"
                       alt=""
-                      class="img-icon"
+                      class="img-ico"
                     />
                     <span>542</span>
                   </div>
-                  <div class="blog-item-meta__item">
+                  <div class="Blog-body-item-meta__item">
                     <img
                       src="./theme/frontend/images/ico_chat.svg"
                       alt=""
-                      class="img-icon"
+                      class="img-ico"
                     />
                     <span>542</span>
                   </div>
                 </div>
               </div>
-              <div class="blog-item">
-                <div class="blog-item-img">
+              <div class="Blog-body-item">
+                <div class="Blog-body-item-img">
                   <img src="./theme/frontend/images/img_item04.png" alt="" />
-                  <div class="blog-item-img__date">
-                    <span class="blog-item-img__day">14</span>
-                    <span class="blog-item-img__month">Jan</span>
+                  <div class="Blog-body-item-img__date">
+                    <span class="Blog-body-item-img__day">14</span>
+                    <span class="Blog-body-item-img__month">Jan</span>
                   </div>
                 </div>
 
-                <div class="blog-item-content">
-                  <h4 class="blog-item-content__title">
+                <div class="Blog-body-item-content">
+                  <h4 class="Blog-body-item-content__ttl">
                     Lorem ipsum dolor sit amet
                   </h4>
-                  <p class="blog-item-content__excerpt">
+                  <p class="Blog-body-item-content__excerpt">
                     consectetur adipiscing elit, sed do eiusmod tempor.
                     incididunt ut labore
                   </p>
                 </div>
 
-                <div class="blog-item-meta">
-                  <div class="blog-item-meta__item">
+                <div class="Blog-body-item-meta">
+                  <div class="Blog-body-item-meta__item">
                     <img
                       src="./theme/frontend/images/ico_view.svg"
                       alt=""
-                      class="img-icon"
+                      class="img-ico"
                     />
                     <span>542</span>
                   </div>
-                  <div class="blog-item-meta__item">
+                  <div class="Blog-body-item-meta__item">
                     <img
                       src="./theme/frontend/images/ico_chat.svg"
                       alt=""
-                      class="img-icon"
+                      class="img-ico"
                     />
                     <span>542</span>
                   </div>
@@ -1032,28 +1117,40 @@
           </div>
         </div>
       </section>
-      <!-- /blog -->
+      <!-- /Blog -->
 
-      <section class="section section--map">
-        <div class="map">
-          <div class="section-header map-header">
-            <p class="section-header__eyebrow">
+      <section id="map" class="Section Section--map js-section">
+        <div class="Map">
+          <div class="Section-header Map-header">
+            <p class="Section-header__eyebrow">
               <i class="fa fa-map-marker"></i>
             </p>
-            <h2 class="section-header__ttl">Open Map</h2>
+            <h2 class="Section-header__ttl">Open Map</h2>
+          </div>
+
+          <div class="Map__embed">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7448.045285051654!2d105.777498!3d21.03178!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x313455f38305cb25%3A0x7676aff8000d7c2b!2zVG95b3RhIE3hu7kgxJDDrG5o!5e0!3m2!1svi!2sus!4v1750403103218!5m2!1svi!2sus"
+              width="100%"
+              height="450"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
           </div>
         </div>
       </section>
-      <!-- /map -->
+      <!-- /Map -->
     </main>
     <!-- /main -->
 
-    <footer class="footer">
-      <div class="container">
-        <div class="footer-wrapper">
-          <div class="footer__section footer-about">
-            <h1 class="footer-about__logo">MoGo</h1>
-            <p class="footer-about__desc">
+    <footer id="footer" class="Footer js-section">
+      <div class="Container">
+        <div class="Footer-wrapper">
+          <div class="Footer__section Footer-wrapper-about">
+            <h1 class="Footer-wrapper-about__logo">MoGo</h1>
+            <p class="Footer-wrapper-about__desc">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
               enim ad minim veniam, quis nostrud exercitation ullamco laboris
@@ -1061,13 +1158,13 @@
               reprehenderit in voluptate velit esse cillum dolore eu fugiat
               nulla pariatur.
             </p>
-            <p class="footer-about__followers">
+            <p class="Footer-wrapper-about__followers">
               <strong>15k</strong> followers
             </p>
 
-            <div class="footer-about-social">
-              <span class="footer-about-social__label">Follow us:</span>
-              <ul class="footer-about-social__list">
+            <div class="Footer-wrapper-about-social">
+              <span class="Footer-wrapper-about-social__label">Follow us:</span>
+              <ul class="Footer-wrapper-about-social__list">
                 <li>
                   <a href="#"><i class="fa fa-facebook"></i></a>
                 </li>
@@ -1092,26 +1189,28 @@
               </ul>
             </div>
 
-            <div class="footer-about-subscribe">
+            <div class="Footer-wrapper-about-subscribe">
               <input
                 type="email"
-                class="footer-about-subscribe__input"
+                class="Footer-wrapper-about-subscribe__input"
                 placeholder="Your email..."
               />
-              <button class="footer-about-subscribe__button">Subscribe</button>
+              <button class="Footer-wrapper-about-subscribe__btn">
+                Subscribe
+              </button>
             </div>
           </div>
 
-          <div class="footer__section footer-blogs">
-            <h3 class="footer__title">Blogs</h3>
-            <div class="footer-blogs-list">
-              <div class="footer-blogs-item">
+          <div class="Footer__section Footer-wrapper-blogs">
+            <h3 class="Footer__ttl">Blogs</h3>
+            <div class="Footer-wrapper-blogs-list">
+              <div class="Footer-wrapper-blogs-item">
                 <img
                   src="./theme/frontend/images/img_item02.png"
                   alt=""
-                  class="footer-blogs-item__img"
+                  class="Footer-wrapper-blogs-item__img"
                 />
-                <div class="footer-blogs-item__content">
+                <div class="Footer-wrapper-blogs-item__content">
                   <p>
                     consectetur adipiscing elit, sed do eiusmod tempor.
                     incididunt ut labore
@@ -1119,13 +1218,13 @@
                   <span>Jun 9, 2016</span>
                 </div>
               </div>
-              <div class="footer-blogs-item">
+              <div class="Footer-wrapper-blogs-item">
                 <img
                   src="./theme/frontend/images/img_item03.png"
                   alt=""
-                  class="footer-blogs-item__img"
+                  class="Footer-wrapper-blogs-item__img"
                 />
-                <div class="footer-blogs-item__content">
+                <div class="Footer-wrapper-blogs-item__content">
                   <p>
                     consectetur adipiscing elit, sed do eiusmod tempor.
                     incididunt ut labore
@@ -1133,13 +1232,13 @@
                   <span>Jun 9, 2016</span>
                 </div>
               </div>
-              <div class="footer-blogs-item">
+              <div class="Footer-wrapper-blogs-item">
                 <img
                   src="./theme/frontend/images/img_item04.png"
                   alt=""
-                  class="footer-blogs-item__img"
+                  class="Footer-wrapper-blogs-item__img"
                 />
-                <div class="footer-blogs-item__content">
+                <div class="Footer-wrapper-blogs-item__content">
                   <p>
                     consectetur adipiscing elit, sed do eiusmod tempor.
                     incididunt ut labore
@@ -1150,9 +1249,9 @@
             </div>
           </div>
 
-          <div class="footer__section footer-gallery">
-            <h3 class="footer__title">Instagram</h3>
-            <div class="footer-gallery-list">
+          <div class="Footer__section Footer-wrapper-gallery">
+            <h3 class="Footer__ttl">Instagram</h3>
+            <div class="Footer-wrapper-gallery-list">
               <img src="./theme/frontend/images/img_item01.png" alt="" />
               <img src="./theme/frontend/images/img_item02.png" alt="" />
               <img src="./theme/frontend/images/img_item03.png" alt="" />
@@ -1163,15 +1262,17 @@
               <img src="./theme/frontend/images/img_item02.png" alt="" />
               <img src="./theme/frontend/images/img_item05.png" alt="" />
             </div>
-            <button class="footer-gallery__button">View more photos</button>
+            <button class="Footer-wrapper-gallery__btn">
+              View more photos
+            </button>
           </div>
         </div>
-        <div class="footer__copyright">
+        <div class="Footer__copyright">
           © 2016 MoGo free PSD template by <strong>Laaqiq</strong>
         </div>
       </div>
     </footer>
-    <!-- /footer -->
+    <!-- /Footer -->
 
     <script src="./theme/frontend/js/main.js"></script>
   </body>

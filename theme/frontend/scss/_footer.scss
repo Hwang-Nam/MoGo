@@ -1,4 +1,4 @@
-.footer {
+.Footer {
   padding-bottom: 1rem;
   padding-top: 3rem;
 
@@ -15,137 +15,137 @@
     @media (min-width: 1024px) {
       grid-template-columns: 4.5fr 3.5fr 2fr;
     }
-  }
 
-  &-about {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-
-    &__logo {
-      font-size: 3rem;
-      line-height: 1;
-    }
-    &__desc {
-    }
-    &__followers {
-      color: $text-emphasis;
-
-      strong {
-        font-size: 1.2rem;
-      }
-    }
-    &-social {
+    &-about {
       display: flex;
-      gap: 1rem;
-      align-items: center;
+      flex-direction: column;
+      gap: 1.5rem;
 
-      &__label {
-        font-style: italic;
+      &__logo {
+        font-size: 3rem;
+        line-height: 1;
       }
-      &__list {
+      &__desc {
+      }
+      &__followers {
+        color: $text-emphasis;
+
+        strong {
+          font-size: 1.2rem;
+        }
+      }
+      &-social {
         display: flex;
         gap: 1rem;
-        color: $color-primary;
-        font-size: 1.2rem;
+        align-items: center;
 
-        li {
-          &:hover {
+        &__label {
+          font-style: italic;
+        }
+        &__list {
+          display: flex;
+          gap: 1rem;
+          color: $color-primary;
+          font-size: 1.2rem;
+
+          li {
+            &:hover {
+              color: $color-secondary;
+            }
+          }
+        }
+      }
+      &-subscribe {
+        display: flex;
+
+        &__input {
+          flex: 1;
+          padding: 1rem;
+          color: $text-base;
+          outline: none;
+          border: 1px solid rgba(0, 0, 0, 0.2);
+        }
+
+        &__btn {
+          width: 150px;
+          background-color: $color-primary;
+          color: $text-inverse;
+          padding-block: 1rem;
+          text-transform: uppercase;
+          font-weight: bold;
+        }
+      }
+    }
+
+    &-blogs {
+      &-list {
+      }
+      &-item {
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+        margin-bottom: 2rem;
+        cursor: pointer;
+
+        &:hover &__content {
+          p {
             color: $color-secondary;
+          }
+        }
+
+        &__img {
+          height: 80px;
+          aspect-ratio: 4/3;
+          object-fit: cover;
+        }
+        &__content {
+          p {
+            text-transform: uppercase;
+            color: $text-emphasis;
+            font-weight: 500;
+
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            line-clamp: 2;
+            overflow: hidden;
+          }
+
+          span {
+            font-style: italic;
           }
         }
       }
     }
-    &-subscribe {
-      display: flex;
 
-      &__input {
-        flex: 1;
-        padding: 1rem;
-        color: $text-base;
-        outline: none;
-        border: 1px solid rgba(0, 0, 0, 0.2);
+    &-gallery {
+      &-list {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 2px;
+
+        @media (min-width: 1024px) {
+          grid-template-columns: repeat(3, 1fr);
+        }
+
+        img {
+          aspect-ratio: 1/1;
+          object-fit: cover;
+        }
       }
+      &__btn {
+        font-style: italic;
+        color: $text-emphasis;
+        margin-top: 1rem;
 
-      &__button {
-        width: 150px;
-        background-color: $color-primary;
-        color: $text-inverse;
-        padding-block: 1rem;
-        text-transform: uppercase;
-        font-weight: bold;
-      }
-    }
-  }
-
-  &-blogs {
-    &-list {
-    }
-    &-item {
-      display: flex;
-      gap: 1rem;
-      align-items: center;
-      margin-bottom: 2rem;
-      cursor: pointer;
-
-      &:hover &__content {
-        p {
+        &:hover {
           color: $color-secondary;
         }
       }
-
-      &__img {
-        height: 80px;
-        aspect-ratio: 4/3;
-        object-fit: cover;
-      }
-      &__content {
-        p {
-          text-transform: uppercase;
-          color: $text-emphasis;
-          font-weight: 500;
-
-          display: -webkit-box;
-          -webkit-line-clamp: 2;
-          -webkit-box-orient: vertical;
-          line-clamp: 2;
-          overflow: hidden;
-        }
-
-        span {
-          font-style: italic;
-        }
-      }
     }
   }
 
-  &-gallery {
-    &-list {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 2px;
-
-      @media (min-width: 1024px) {
-        grid-template-columns: repeat(3, 1fr);
-      }
-
-      img {
-        aspect-ratio: 1/1;
-        object-fit: cover;
-      }
-    }
-    &__button {
-      font-style: italic;
-      color: $text-emphasis;
-      margin-top: 1rem;
-
-      &:hover {
-        color: $color-secondary;
-      }
-    }
-  }
-
-  &__title {
+  &__ttl {
     text-transform: uppercase;
     margin-bottom: 2rem;
   }

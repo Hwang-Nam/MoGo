@@ -58,13 +58,13 @@ $gradient-main: linear-gradient(to bottom, #f48b82, #fce28a);
   margin-right: auto;
 }
 
-.container {
+.Container {
   max-width: 1240px;
   width: 100%;
   @include mx-auto();
 }
 
-.img-icon {
+.img-ico {
   display: inline-block;
   width: 1.5rem;
   height: 1.5rem;
