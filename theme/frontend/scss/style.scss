@@ -32,7 +32,7 @@ body.locked {
     padding-bottom: 0 !important;
   }
 
-  &--festimonials {
+  &--testimonial {
     background-image: url("../images/img_bg03.png");
     background-position: center;
     background-size: cover;
@@ -298,12 +298,12 @@ body.locked {
         .About-body-item-overlay {
           opacity: 1;
         }
-        .About-body-item__bottom {
+        .About-body-item__shadow {
           opacity: 1;
         }
       }
 
-      &__bottom {
+      &__shadow {
         position: absolute;
         inset: 0;
         background-color: $color-primary;
@@ -962,8 +962,8 @@ body.locked {
   }
 }
 
-// Testimonials
-.Testimonials {
+// Testimonial
+.Testimonial {
   &-body {
     display: grid;
     gap: 2rem;
@@ -1028,7 +1028,7 @@ body.locked {
           }
         }
 
-        &__text {
+        &__txt {
           font-size: 0.75rem;
           margin-top: 0.5rem;
 
